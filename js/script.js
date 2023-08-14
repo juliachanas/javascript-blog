@@ -68,22 +68,34 @@ const generateTitileLinks = function () {
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
 
-  /* for each article */
+  /* [DONE] find all the articles and save them to variable: articles*/
+
   const articles = document.querySelectorAll(optArticleSelector);
   console.log('articles' + articles);
+
+  /* for each article */
 
   for (let article of articles) {
     /* [DONE] get the article id */
     const articleId = article.getAttribute('id');
     console.log('article ID: ' + articleId);
 
-    /* find the title element */
+    /* [DONE] find the title element */ /* get the title from the title element */
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    console.log('articleTitle' + articleTitle);
 
-    /* get the title from the title element */
+    /* [DONE]create HTML of the link */
+    const linkHTML =
+      '<li><a href="#' +
+      articleId +
+      '"><span>' +
+      articleTitle +
+      '</span></a></li>';
+    console.log(linkHTML);
 
-    /* create HTML of the link */
+    /* [DONE] insert link into titleList */
 
-    /* insert link into titleList */
+    titleList.insertAdjacentHTML('beforeend', linkHTML); //titleList.innerHTML = titleList.innerHTML + linkHTML; - MOZNA TEZ TAK
   }
 };
 
