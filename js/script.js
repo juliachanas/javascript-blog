@@ -51,12 +51,6 @@ const titleClickHandler = function (event) {
   console.log('ACTIVE ARTICLE:', targetArticle);
 };
 
-const links = document.querySelectorAll('.titles a');
-
-for (let link of links) {
-  link.addEventListener('click', titleClickHandler);
-}
-
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
@@ -74,6 +68,8 @@ const generateTitileLinks = function () {
   console.log('articles' + articles);
 
   /* for each article */
+
+  let html = '';
 
   for (let article of articles) {
     /* [DONE] get the article id */
@@ -95,7 +91,17 @@ const generateTitileLinks = function () {
 
     /* [DONE] insert link into titleList */
 
-    titleList.insertAdjacentHTML('beforeend', linkHTML); //titleList.innerHTML = titleList.innerHTML + linkHTML; - MOZNA TEZ TAK
+    //titleList.insertAdjacentHTML('beforeend', linkHTML); //titleList.innerHTML = titleList.innerHTML + linkHTML; - MOZNA TEZ TAK
+    html = html + linkHTML;
+  }
+  titleList.innerHTML = html;
+  console.log(html);
+
+  const links = document.querySelectorAll('.titles a');
+  console.log('linki ' + links);
+
+  for (let link of links) {
+    link.addEventListener('click', titleClickHandler);
   }
 };
 
