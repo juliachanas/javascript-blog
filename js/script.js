@@ -56,8 +56,8 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list';
 
-const generateTitileLinks = function () {
-  //console.log('bum');
+function generateTitileLinks(customSelector = '') {
+  console.log('custom selector ' + customSelector);
 
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
@@ -65,8 +65,10 @@ const generateTitileLinks = function () {
 
   /* [DONE] find all the articles and save them to variable: articles*/
 
-  const articles = document.querySelectorAll(optArticleSelector);
-  //console.log('articles' + articles);
+  const articles = document.querySelectorAll(
+    optArticleSelector + customSelector
+  );
+  console.log(optArticleSelector + customSelector);
 
   /* for each article */
 
@@ -104,7 +106,7 @@ const generateTitileLinks = function () {
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
   }
-};
+}
 
 generateTitileLinks();
 
