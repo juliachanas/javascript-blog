@@ -98,4 +98,7 @@ body {
 }
 .post-tags p {
   margin: 0 10px 0 0;
+}
+.post-tags span {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */
