@@ -122,3 +122,27 @@ body {
   }
 }
 
+.list.tags li{
+  display:inline-block;
+  padding: 0 10px;
+}
+
+.tag-size-1 {
+  font-size: 20px;
+  color: red;
+}
+
+.tag-size-2 {
+  font-size: 25px;
+  color: black;
+}
+
+.tag-size-3 {
+  font-size: 30px;
+  color: blue;
+}
+
+.tag-size-4 {
+  font-size: 40px;
+  color: pink;
+}

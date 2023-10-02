@@ -25,6 +25,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
 }
+
 .section-title span {
   text-transform: none;
   font-weight: 400;
@@ -68,6 +69,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .list .active {
   font-weight: bold;
 }
@@ -85,6 +87,7 @@ body {
 .post {
   display: none;
 }
+
 .post.active {
   display: block;
 }
@@ -96,9 +99,36 @@ body {
 .post-tags {
   display: flex;
 }
+
 .post-tags p {
   margin: 0 10px 0 0;
 }
+
 .post-tags span {
   padding-right: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.list.tags li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.tag-size-1 {
+  font-size: 20px;
+  color: red;
+}
+
+.tag-size-2 {
+  font-size: 25px;
+  color: black;
+}
+
+.tag-size-3 {
+  font-size: 30px;
+  color: blue;
+}
+
+.tag-size-4 {
+  font-size: 40px;
+  color: pink;
+}
